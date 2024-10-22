@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+   <%
+   C04.UserDto userdto = new C04.UserDto();
+   String username = request.getParameter("username");
+   String password = request.getAttribute("password");
+   %>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+	
+	<!-- userDto 객체에 전달받은 파라미터를 저장(UserDto 는 C04패키지 생성후에 USerDto class 생성)
+		request에 setAttribute 로 userDto 저장
+		02validation.jsp 로 forwarding
+	 -->
+</body>
+</html>

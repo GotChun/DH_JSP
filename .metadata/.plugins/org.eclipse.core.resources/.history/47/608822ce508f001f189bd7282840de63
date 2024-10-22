@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- js에서 jsp 로 전달하려면 form 태그 사용 -->
+	
+	<form action = "C04JS_to_JSP.jsp" name ="myForm">
+		<input name = "username" />
+		<input name = "password" />
+		<input name = "role" type="hidden" />
+		<input name = "flag" value="true" type="hidden" />
+	
+	</form>
+	
+<script>
+	const flag = '<%=request.getParameter("flag")%>';
+	if(flag==null || flag==''){
+		const form = document.myForm;
+		form.username.value="홍길동";
+		form.password.value="1234";
+		form.role.value="ROLE_User";
+		form.submit();
+	}
+
+</script>
+	
+</body>
+</html>

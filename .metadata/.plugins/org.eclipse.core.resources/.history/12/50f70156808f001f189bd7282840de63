@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="00join.jsp">
+	<input type="text" name="username" placeholder="id입력"/>
+	<input type="text" name="password" placeholder="비밀번호입력"/>
+	<input type="text" name="role" placeholder="id입력"/>
+	
+	</form>
+	
+</body>
+</html>

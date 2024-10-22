@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.io.*" %>
+
+<%  
+	
+	//Dir 경로생성
+	String dirPath = pageContext.getServletContext().getRealPath("/")+"C05\\download\\";  //실제 서블릿 파일의 경로 확인
+	System.out.println("Path : " + dirPath);
+
+
+%>

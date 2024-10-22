@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="03Result.jsp">
+		<input name="col1" placeholder="열이름1"> 
+		<input name="col2" placeholder="열이름2"> 
+		<input name="col3" placeholder="열이름3"> 
+		<input name="col4" placeholder="열이름4"> 
+		<input name="style" placeholder="Nav기본 스타일 Code"> 
+		<button>페이지 생성 요청</button>
+		</form>
+</body>
+</html>
