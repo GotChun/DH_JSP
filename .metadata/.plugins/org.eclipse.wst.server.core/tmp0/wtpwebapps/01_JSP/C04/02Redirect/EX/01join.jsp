@@ -34,5 +34,5 @@
 		UserDto객체에 전달받은 파라미터(username,password,role)를 저장(UserDto는 C04패키지생성후에 UserDto Class 생성)
 		request에  setAttribute로 userDto 저장("userDto",userDto);
 		02ValidationCheck.jsp 로 forwarding
-	-->
+	--> 
 	

@@ -27,11 +27,12 @@
 		response.setHeader("Content-Disposition","attachment;filename=TEXT.txt" );  //attachment 붙이면 해당 파일명으로 다운로드
 		
 		//inOutStream 전송
+		byte [] buffer = new byte[4096];
 		while(true){
-			int data = in.read();
+			int data = in.read(buffer);
 			if(data==1)
 				break;
-			bout.write((byte)data);
+			bout.write(buffer,0,data);
 			bout.flush();
 		}
 		bout.close();
