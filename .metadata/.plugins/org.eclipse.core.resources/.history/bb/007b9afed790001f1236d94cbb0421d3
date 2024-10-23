@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+   <%
+   String userid = request.getParameter("userid");
+   String password= request.getParameter("password");
+   
+   if(isValid(userid,password,request)){
+	   //유효성 체크 오류 발생한 경우
+	   request.getRequestDispatcher("../join.jsp").forward(request,response);
+   }
+	   
+   
+   
+   
+   %>
+   
+   <%@ page import ="java.sql.*" %>
+   <%!
+   HttpServletRequest request;
+   
+   private String url = "jdbc:mysql://localhost/bookdb?serverTimezone=UTC";
+   private String id = "root";
+   private String pw = "1234";
+   
+   private Connection conn;
+   private PreparedStatement pstmt;
+   private ResultSet rs;
+   
+   		private boolean isValid(String id,String pw,  HttpServletRequest request){
+	   if(id.trim().isEmpty()){
+		   request.setAttribute("msg_userid","id입력하셈");
+		  return false;
+	   }
+	   if(pw.trim().isEmpty()){
+		   request.setAttribute("msg_password","비번을 입력하셈");
+		  return false;
+	   }
+	   return true;
+   }
+   
+   %>

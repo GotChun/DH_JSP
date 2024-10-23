@@ -16,7 +16,7 @@
 	<hr>
 	
 	<%
-		Boolean isLogined = (Boolean)session.getAttribute("isLogined");   //이 과정이 필요한가 ? 음 필요하지 
+		Boolean isLogined = (Boolean)session.getAttribute("isLogined"); 
 		if(isLogined==null){
 			%>
 			<a href="login.jsp">로그인</a>

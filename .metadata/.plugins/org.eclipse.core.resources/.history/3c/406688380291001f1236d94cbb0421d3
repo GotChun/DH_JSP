@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+	
+	<%
+	//파라미터 받기
+	String username= request.getParameter("username");
+	String password= request.getParameter("password");
+	String idchk = request.getParameter("idchk");
+	
+	//유효성 체크
+	
+	//인증처리
+	if(!"user1".equals(username)){
+		request.setAttribute("message","ID가 일치하지 않습니다");
+		request.getRequestDispatcher("./login.jsp").forward(request,response);
+		return ;
+	}
+	if(!"1234".equals(password)){
+		request.setAttribute("message","비밀번호가 일치하지 않습니다");
+		request.getRequestDispatcher("./login.jsp").forward(request,response);
+		return ;
+	}
+		
+	//인증 후 처리
+	session.setAttribute("id",username);
+	session.setAttribute("role","Role_User");
+	//idchk 여부확인(cookie)
+	System.out.println("idchk : " +idchk);
+	if(idchk!=null){
+		Cookie idChkStatus = new Cookie("idChkStatus","true");
+		Cookie idCookie = new Cookie("id",username);
+		response.addCookie(idChkStatus);
+		response.addCookie(idCookie);
+	}
+	
+	
+	
+	%>

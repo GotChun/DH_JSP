@@ -1,0 +1,12 @@
+package C06;
+
+public class UserDto {
+
+	private String userid;
+	private String password;
+	private String role;
+	
+	
+	
+	
+}

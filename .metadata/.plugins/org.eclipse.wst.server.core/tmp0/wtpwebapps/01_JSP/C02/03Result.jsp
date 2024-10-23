@@ -46,7 +46,7 @@ nav { <%=style%>
 
 	<table>
 		<%
-		for (int i = 0; i < col; i++) {
+		for (int i = 0; i < col; i++) { 
 		%>
 		<tr>
 			<%
