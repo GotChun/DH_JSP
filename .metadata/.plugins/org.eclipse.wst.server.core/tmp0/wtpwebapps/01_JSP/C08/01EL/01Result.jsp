@@ -5,7 +5,7 @@
     String userid = request.getParameter("userid");
     String password = request.getParameter("password");
     %>
-    
+    	
     
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<%-- userid : <%=userid %><br>
+
 password : <%=password %><br> --%>
 
 <%
@@ -55,6 +55,31 @@ ppp : ${pageContextScope.P_ATTR }<br>
 
 <!-- ATTR 중첩 -->
 DUP_VALUE : ${DUP}<br>
+
+<!-- object 접근 -->
+<%@ page import = "C08.*" %>
+
+<%
+	SimpleDto dto = new SimpleDto("길동좌",50);
+	request.setAttribute("dto", dto);
+%>
+<%=dto.getName() %><br>
+${dto.name }<br>
+${dto.age }<br>
+
+<!-- 연산처리 -->
+<%=1+1 %><br>
+${1+"1"}<br> <% //el 표현식으로 쓰면 문자열도 기본자료형인 integer 으로 인식한다%>
+
+<!-- null check -->
+<hr>
+null : ${null }<br>
+empty null : ${empty unll }<br> <% //안에 값이 null 인지 확인후 true false 반환 %>
+
+<% request.setAttribute("Test", "B"); %>
+
+empty test : ${empty Test }  
+empty test : ${!empty Test }  //이거 부정연산자도 사용가능
 
 
 </body>

@@ -1,0 +1,8 @@
+package C09;
+
+public class TestDto {
+
+	private String userid;
+	private String password;
+	private String username;
+}
