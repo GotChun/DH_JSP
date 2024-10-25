@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%@ page import ="utils.*,dto.*" %>
+<%
+	//파라미터 받기 , 이게 mvc 의 컨트롤러 같은 역할이라 보면 될듯 ?
+	MemberDto dto = new MemberDto();
+ int custno = (Integer)request.getParameter("custno");
+ String custname = request.getParameter("custname");
+ String phone = request.getParameter("phone");
+ String address = request.getParameter("address");
+ LocalDate joindate = request.getParameter("joindate");
+ char grade = (char)request.getParameter("grade");
+ String city = request.getParameter("city");
+	
+	//유효성 체크
+	
+	//DB Insert
+	
+	//뷰 이동 or 뷰에 내용 전달
+		
+%>
