@@ -21,7 +21,7 @@ public class TeamDao {
 		pstmt.setInt(4, team.getWorldstitles());
 		pstmt.setString(5, team.getTeamcolor());
 		pstmt.setString(6, team.getTeamheadcoach());
-		
+
 		pstmt.executeUpdate();
 	}catch(Exception e) {
 		e.printStackTrace();
