@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\01_JSP" path="/01_JSP" reloadable="true" source="org.eclipse.jst.jee.server:01_JSP"/><Context docBase="C:\workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\two2" path="/two2" reloadable="true" source="org.eclipse.jst.jee.server:two2"/></Host>
+      <Context docBase="C:\Users\DH.park\Desktop\국비 수업\JSP&amp;Servlet\DH_JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\DH.park\Desktop\국비 수업\JSP&amp;Servlet\DH_JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\01_JSP" path="/01_JSP" reloadable="true" source="org.eclipse.jst.jee.server:01_JSP"/><Context docBase="C:\Users\DH.park\Desktop\국비 수업\JSP&amp;Servlet\DH_JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\two2" path="/two2" reloadable="true" source="org.eclipse.jst.jee.server:two2"/></Host>
     </Engine>
   </Service>
 </Server>
