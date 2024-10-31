@@ -9,15 +9,20 @@
 <body>
 	<div class="wrapper">
 	
-	<%@include file %>
+	<%@include file = "/resources/layout/header.jsp"%>
 	
-	
+	<section>
 	<form action="/login.do" method="post" name="loginform">
 	<input type="text" name="userid"/>
 	<input type="text" name="password"/>
 	<input type="submit" value="login"/>
 	</form>
 	
+	</section>
+	
+	
+	
+	<%@include file = "/resources/layout/footer.jsp"%>
 	
 	</div>
 </body>

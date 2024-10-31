@@ -10,6 +10,7 @@ public class MemberDto {
 	private LocalDate joindate;
 	private char grade;
 	private String city;
+	private String role;
 	public int getCustno() {
 		return custno;
 	}
@@ -52,13 +53,21 @@ public class MemberDto {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	@Override
 	public String toString() {
 		return "MemberDto [custno=" + custno + ", custname=" + custname + ", phone=" + phone + ", address=" + address
 				+ ", joindate=" + joindate + ", grade=" + grade + ", city=" + city + "]";
 	}
 	public MemberDto(int custno, String custname, String phone, String address, LocalDate joindate, char grade,
-			String city) {
+			String city,String role) {
 		super();
 		this.custno = custno;
 		this.custname = custname;
@@ -67,6 +76,7 @@ public class MemberDto {
 		this.joindate = joindate;
 		this.grade = grade;
 		this.city = city;
+		this.role = role;
 	}
 	public MemberDto() {};
 	//getter and setter

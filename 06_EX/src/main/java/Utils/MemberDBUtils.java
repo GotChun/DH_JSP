@@ -110,25 +110,11 @@ public class MemberDBUtils {
 	public static MemberDto select(String custname) throws Exception{
 		List<MemberDto> list = new ArrayList();
 		MemberDto dto = null;
-		pstmt = conn.prepareStatement("select * from member_tbl_02");
+		pstmt = conn.prepareStatement("select * from member_tbl_02 where custname=?");
+		pstmt.setString(1, custname);
 		rs = pstmt.executeQuery();
-		if(rs!=null) {
-			
-			while(rs.next()) {
-				dto = new MemberDto();
-				dto.setCustno(rs.getInt("custno"));
-				dto.setCustname(rs.getString("custname"));
-				dto.setPhone(rs.getString("phone"));
-				dto.setAddress(rs.getString("address"));
-				dto.setRole(rs.getString("role"));
-				dto.setJoindate(rs.getDate("joindate").toLocalDate() );
-				dto.setGrade(rs.getString("grade").charAt(0));
-				dto.setCity(rs.getString("city"));
-				
-				list.add(dto);
-			}
-			
-		}
+		dto.setRole(rs.getString());
+	
 		
 		
 		return list;

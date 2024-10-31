@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Dto.MemberDto;
+import Utils.MemberDBUtils;
 
 @WebServlet("/login.do")
 public class LoginServlet extends HttpServlet{
-MemberDto memberDto;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -24,13 +24,27 @@ MemberDto memberDto;
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		
+		MemberDto dto = null;
+		//role 을 꺼내야함
 		String userid = req.getParameter("userid");
 		String password = req.getParameter("password");
+
+		try {
+			MemberDBUtils.conn();
+		dto = 	MemberDBUtils.select(userid);
+			MemberDBUtils.conn.close();
+			MemberDBUtils.pstmt.close();
+			MemberDBUtils.rs.close();
+			System.out.println("DTO : "+ dto);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		
-		Integer rolenum = (int)memberDto.getGrade();
+		
+		
+		
+		Integer rolenum = (int)dto.getGrade();
 		HttpSession session = req.getSession();
 		
 		if("admin".equals(userid)) {
