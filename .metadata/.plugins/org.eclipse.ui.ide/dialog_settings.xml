@@ -15,8 +15,12 @@
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 <<<<<<< HEAD
+			<item value="C:\workspace2\99_JAVA-master"/>
+=======
+<<<<<<< HEAD
 			<item value="C:\Users\DH.park\Desktop\국비 수업\JSP&amp;Servlet\DH_JSP"/>
 =======
+>>>>>>> a77cf7f309e1945d5e55d1c574e94b5e3e655df7
 			<item value="C:\workspace2\06_EX"/>
 			<item value="C:\workspace2"/>
 			<item value="C:\workspace2\jsp"/>
