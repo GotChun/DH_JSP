@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="MVCprac.View.View"/>
+=======
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<<<<<<< HEAD
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="MVCprac.Domain.TeamDao"/>
+    <fullyQualifiedTypeName name="MVCprac.View.View"/>
+=======
+>>>>>>> a77cf7f309e1945d5e55d1c574e94b5e3e655df7
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
@@ -11,6 +22,7 @@
     <fullyQualifiedTypeName name="javax.servlet.Filter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="Utils.MemberDBUtils"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletRequestListener"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -24,4 +36,7 @@
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
     <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="Domain.Common.Dao.ConnectionPool.ConnectionPool"/>
+=======
+>>>>>>> 6b290bb9a17ba6823ad9c180c8b005ba769f4d87
+>>>>>>> a77cf7f309e1945d5e55d1c574e94b5e3e655df7
 </qualifiedTypeNameHistroy>

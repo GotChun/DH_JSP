@@ -1,4 +1,12 @@
 INDEX VERSION 1.134
+<<<<<<< HEAD
+C:\Users\DH.park\Desktop\국비 수업\JSP&Servlet\DH_JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1507955961.index
+\02_ServletInit\src\main\java
+C:\Users\DH.park\Desktop\국비 수업\JSP&Servlet\DH_JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2632977791.index
+\03_ex\src\main\java
+C:\Users\DH.park\Desktop\국비 수업\JSP&Servlet\DH_JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3263269598.index
+\02_ServletInit\src\main\java
+=======
 C:\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2489387764.index
 \02_ServletInit\src\main\java
 C:\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3263269598.index
@@ -135,5 +143,9 @@ C:\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\922237826.in
 \02_HRD_1234\src\main\java
 C:\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1200073119.index
 \01_JSP\src\main\java
+<<<<<<< HEAD
 C:\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4088154263.index
 \10_MVC_BOOK\src\main\java
+=======
+>>>>>>> 6b290bb9a17ba6823ad9c180c8b005ba769f4d87
+>>>>>>> a77cf7f309e1945d5e55d1c574e94b5e3e655df7
