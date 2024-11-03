@@ -3,31 +3,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- link -->
+	<%@include file="/resources/static/jsp/link.jsp" %>
+	
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<%@include file="/resources/static/jsp/link.jsp" %>
-
 </head>
 <body>
 
-<div class="wrapper">
-<header>
-<!-- top-header -->
-<%@include file="/resources/static/jsp/top-header.jsp" %>
-<!-- nav -->
-<%@include file="/resources/static/jsp/nav.jsp" %>
-</header>
+	<div class="wrapper">
+		<header>
+			<!-- topHeader -->
+			<%@include file="/resources/static/jsp/topHeader.jsp" %>
+			<!-- nav -->
+			<%@include file="/resources/static/jsp/nav.jsp" %>
+		</header>
+		<main  class="layout">
+				<h1>BOOK ERROR PAGE</h1>
+				<hr>
+				${exception }
+		</main>
+		
+		
+		<!-- footer -->
+		<%@include file="/resources/static/jsp/footer.jsp" %>
+	</div>
 
-<main class="layout">
-	<h1>소박하다</h1>
-
-</main>
-
-
-<!-- footer -->
-<%@include file="/resources/static/jsp/footer.jsp" %>
-</div>
-
-
+	
 </body>
 </html>
