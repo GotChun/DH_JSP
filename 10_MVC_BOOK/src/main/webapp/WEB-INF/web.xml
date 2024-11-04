@@ -28,9 +28,10 @@
   <filter-name>UTF-8_FILTER</filter-name>
   <filter-class>Filter.EncodingFilter</filter-class>
   </filter>
+  
   <filter-mapping>
   <filter-name>UTF-8_FILTER</filter-name>
-  <url-pattern>/</url-pattern>
+  <url-pattern>/*</url-pattern>
   </filter-mapping>
   
    <!-- default Servlet  -->

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+form{
+	width:400px;
+}
+
+.profileBox{
+	width:150px;
+	height:150px;
+	border:1px solid;
+	border-radius : 50%;
+	margin:15px auto;
+}

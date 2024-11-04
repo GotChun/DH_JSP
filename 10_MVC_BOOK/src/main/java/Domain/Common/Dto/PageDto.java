@@ -29,15 +29,15 @@ public class PageDto {
 		this.criteria = criteria;
 		
 		//전체페이지 계산
-		totalpage =(int)Math.ceil((1.0*totalcount)/criteria.getAmount());
+		totalpage =(int)Math.ceil((1.0*totalcount)/criteria.getAmount());  //올림 처리해서 나머지있을 페이지까지 만듬
 		
 		//블럭계산
 		pagePerBlock=15;
-		totalBlock = (int)Math.ceil( (1.0*totalpage) / pagePerBlock );
-		nowBlock =  (int)Math.ceil ((1.0*criteria.getPageno()) / pagePerBlock);
+		totalBlock = (int)Math.ceil( (1.0*totalpage) / pagePerBlock ); //총 있을 리스트 블럭의 개수
+		nowBlock =  (int)Math.ceil ((1.0*criteria.getPageno()) / pagePerBlock); //현재 몇번째 블럭인지 16이상부터는 1.? 이니까 2로 되서 2번째 블럭
 		
 		//Next,Prev 버튼 활성화 유무
-		prev=nowBlock>1;
+		prev=nowBlock>1;	//현재 블럭이 1보다 크면 이전 버튼이 첫번째 블럭이면 이전버튼이 없으니까 같거나 작아야하는거아닌가
 		next=nowBlock<totalBlock;
 		
 		//블럭에 표시할 페이지 번호 계산

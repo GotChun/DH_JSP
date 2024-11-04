@@ -11,40 +11,54 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Controller.Book.BookAddController;
+import Controller.Book.BookDeleteController;
 import Controller.Book.BookListController;
+import Controller.Book.BookReadController;
+import Controller.Book.BookUpdateController;
+import Controller.User.JoinController;
+import Controller.User.UserLoginController;
+import Controller.User.UserLogoutController;
+import Controller.User.UserMyInfoController;
 
-public class FrontController extends HttpServlet{
+
+// 		/*	:	모든 요청 처리(모든경로(정적자원,/WEB-INF..)) 
+// 		/	:	모든 요청 처리(프로젝트경로기준, 여기는 /09_MVC_INIT 을기준으로하는 요청만 처리)
+//				정적 자원 요청은 x , /WEB-INF/ 경로도 x
+public class FrontController extends HttpServlet {
 	
 	private Map<String,SubController> map = new HashMap();
 	
 	public FrontController(){
 		System.out.println("[FC] FrontController()....");
+	
 	}
 	
-	
 	@Override
-	public void init(ServletConfig config) throws ServletException {		//init 알아서 실행됨
-		// TODO Auto-generated method stub
-		System.out.println("init..");
+	public void init(ServletConfig config) throws ServletException {
+		System.out.println("[FC] init()....");
 		
-		String path = config.getServletContext().getContextPath();		//프로젝트 경로
-		map.put(path+"/", new HomeController());
+		String path = config.getServletContext().getContextPath();
+		//HOME
+		map.put(path+"/", new HomeController());	
 		
-		//book
-		map.put(path+ "/book/add", new BookAddController());
+		//BOOK
+		map.put(path+"/book/add", new BookAddController());
 		map.put(path+"/book/list", new BookListController());
-		map.put("/book/delete", null);
-		map.put("/book/get", null);
-		map.put("/book/getAll", null);
-		//user
-		map.put("/user/Join", null);
-		map.put("/user/Info", null );
-		map.put("/user/remove", null);
-		map.put("/user/login",  null);
-		map.put("/user/logout",  null);
+		map.put(path+"/book/read", new BookReadController());
+		map.put(path+"/book/update", new BookUpdateController());
+		map.put(path+"/book/delete", new BookDeleteController());
+
+		//USER
+		map.put(path+"/join", new JoinController());
+		map.put(path+"/login", new UserLoginController());
+		map.put(path+"/logout", new UserLogoutController());
+		map.put(path+"/user/myinfo", new UserMyInfoController());
+		map.put(path+"/user/remove", null); 
 		
 	}
 
+	
+	
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -56,6 +70,6 @@ public class FrontController extends HttpServlet{
 		controller.execute(req,resp);	
 	}
 
+
+	
 }
-
-

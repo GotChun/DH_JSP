@@ -133,10 +133,10 @@ public class BookServiceImpl {
 		// TODO Auto-generated method stub
 		List<BookDto> list = null;
 		try {
-			//connectionPool.beginTransaction();
+			connectionPool.beginTransaction();
 			
 			
-			if(criteria.getType()==null || "all".equals(criteria.getType())) {
+			if(criteria.getType()==null ) {
 				//전체검색
 				int offset = (criteria.getPageno()-1) * criteria.getAmount();		
 				list =  bookDaoImpl.select(offset,criteria.getAmount());
@@ -150,10 +150,9 @@ public class BookServiceImpl {
 				rvalue.put("pageDto", pageDto);
 				
 			}
-			else if("all".equals(criteria.getType())){
-				
-			}
 			else {
+				
+				//전체검색
 				int offset = (criteria.getPageno()-1) * criteria.getAmount();		
 				list =  bookDaoImpl.select(offset,criteria.getAmount(),criteria.getType(),criteria.getKeyword());
 				
@@ -163,15 +162,16 @@ public class BookServiceImpl {
 				System.out.println("TOTAL : " + total);
 				System.out.println("pageDto : " + pageDto);
 				rvalue.put("list", list);
-				rvalue.put("pageDto", pageDto);
+				rvalue.put("pageDto", pageDto);	
+	
 			}
 			
 			
 			
-			//connectionPool.commitTransaction();
+			connectionPool.commitTransaction();
 			
 		}catch(SQLException e) {
-			//connectionPool.rollbackTransaction();
+			connectionPool.rollbackTransaction();
 			throw new Exception(e);
 		}
 		

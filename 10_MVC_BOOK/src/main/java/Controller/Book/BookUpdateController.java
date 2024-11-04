@@ -1,5 +1,103 @@
 package Controller.Book;
 
-public class BookUpdateController {
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Controller.SubController;
+import Domain.Common.Dto.BookDto;
+import Domain.Common.Service.BookServiceImpl;
+
+public class BookUpdateController implements SubController {
+
+	private BookServiceImpl bookService;
+
+	public BookUpdateController() {
+
+		try {
+			bookService = BookServiceImpl.getInstance();
+			System.out.println("객체생성완료bookread");
+		} catch (Exception e) {
+			// ExceptionHandler 로 전달..
+			System.out.println("객체생성 실패");
+		}
+
+	}
+
+	// 예외처리함수
+	public void ExceptionHandler(Exception e, HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException {
+		try {
+			req.setAttribute("exception", e);
+			req.getRequestDispatcher("/WEB-INF/view/book/error.jsp").forward(req, resp);
+		} catch (Exception ex) {
+			throw new ServletException(ex);
+		}
+
+	}
+
+	@Override
+	public void execute(HttpServletRequest req, HttpServletResponse resp) {
+
+		try {
+			String method = req.getMethod();
+			if("GET".equals(method)) {
+				//파라미터
+				Long bookCode = Long.parseLong(req.getParameter("bookCode"));
+	
+				
+				
+				//서비스 실행
+				BookDto bookDto =  bookService.getBook(bookCode);
+				
+				//뷰로
+				req.setAttribute("bookDto", bookDto);
+				System.out.println("[BC] GET /book/read..");
+				req.getRequestDispatcher("/WEB-INF/view/book/update.jsp").forward(req, resp);
+			}
+				
+			Long bookCode = Long.parseLong(req.getParameter("bookCode"));
+			String bookname = req.getParameter("bookName");
+			String publisher = req.getParameter("publisher");
+			String isbn = req.getParameter("isbn");
+			
+			
+			//서비스
+			BookDto bookDto = new BookDto(bookCode,bookname,publisher,isbn);
+			boolean isUpdate =  bookService.bookUpdate(bookDto);
+				
+				if(isUpdate) {
+					resp.sendRedirect(req.getContextPath()+"/book/read?bookCode=+bookCode");
+					return ;
+				}else {
+					req.setAttribute("messgae", "update..");
+					req.getRequestDispatcher("WEB-INF/view/book/update.jsp").forward(req, resp);
+				}
+				
+				//뷰
+			
+
+		} catch (Exception e) {
+
+			try {
+				ExceptionHandler(e, req, resp);
+
+			} catch (ServletException e1) {
+
+				try {
+					throw new ServletException(e1);
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+
+			System.out.println("[BC] Exception 발생.." + e);
+		}
+
+	}
+
+	private boolean isValid(Object dto) {
+		return true;
+	}
 
 }

@@ -2,8 +2,8 @@ package Domain.Common.Dto;
 
 public class Criteria {
 	//현재 페이지
-	private int pageno;
-	private int amount;
+	private int pageno; // 현재 페이지의 넘버
+	private int amount; // 한 페이지의 나타나는 요소 개수
 	private String type;
 	private String keyword;
 	public int getPageno() {

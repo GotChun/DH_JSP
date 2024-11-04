@@ -59,12 +59,9 @@ public class BookListController implements SubController {
 					criteria = new Criteria();	//pageNo = 1  amount = 10 type = null = keyword = null	
 				}else {
 					
-					if(type==null || "all".equals(type)) {
-					criteria = new Criteria(pageno,10);		//pageno 
-					}else {
 						criteria = new Criteria(pageno,10,type,keyword);
 					}
-				}
+				
 				//유효성
 				
 				//서비스

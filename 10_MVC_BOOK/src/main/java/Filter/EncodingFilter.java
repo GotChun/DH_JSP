@@ -24,7 +24,7 @@ public class EncodingFilter implements Filter{
 		
 		res.setContentType("text/html; charset=UTF-8");
 		
-		System.out.println("the end");
+		System.out.println("filter end..");
 	}
 
 	

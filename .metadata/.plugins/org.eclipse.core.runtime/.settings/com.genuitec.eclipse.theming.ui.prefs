@@ -1,13 +1,15 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1693315978000
+codetogether.announce.displayed=true
 configurationInstallLocation=/C\:/Users/Administrator/eclipse/jee-2024-09/eclipse/
+ct.reengagement.display.after=1741331136280
 ct.upsell.display.after=1730100867173
 eclipse.preferences.version=1
 iconcolormode=primary
 iconreplacement=true
 includeThemingInOomph=false
-last.download.attempt.time=1730679126074
-lastConfiguration=1730679120697
+last.download.attempt.time=1730679280545
+lastConfiguration=1730679274625
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray

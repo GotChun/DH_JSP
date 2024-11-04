@@ -4,16 +4,18 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import Domain.Common.Dao.BookDaoIMPL;
+import Domain.Common.Dao.UserDaoImpl;
 import Domain.Common.Dto.BookDto;
+import Domain.Common.Dto.UserDto;
 
 class DaoTests {
 
 	
 	@Test
 	void bookDaoCRUDTests() throws Exception {
-		BookDaoIMPL dao = BookDaoIMPL.getInstance();
+		UserDaoImpl dao = UserDaoImpl.getInstance();
 		
-		dao.insert(new BookDto(123444L,"제하하하","검은수염","12-12"));
+		dao.insert(new UserDto());
 	}
 
 	
