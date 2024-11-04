@@ -55,7 +55,7 @@ public class BookListController implements SubController {
 				String type = req.getParameter("type");
 				String keyword = req.getParameter("keyword");
 				Criteria criteria = null;
-				if(pageno==null) {
+				if(pageno==null) {	//페이지 넘버 가져왔는데 없으면 criteria 객체 생성
 					criteria = new Criteria();	//pageNo = 1  amount = 10 type = null = keyword = null	
 				}else {
 					
@@ -69,6 +69,8 @@ public class BookListController implements SubController {
 				List<BookDto> list = (List<BookDto>) rValue.get("list");
 				PageDto pageDto =(PageDto) rValue.get("pageDto");
 				
+				
+				//뷰로 이동
 				req.setAttribute("list", list);
 				req.setAttribute("pageDto", pageDto);
 				req.getRequestDispatcher("/WEB-INF/view/book/list.jsp").forward(req, resp);

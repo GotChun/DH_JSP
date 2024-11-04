@@ -38,6 +38,7 @@ public class PageDto {
 		
 		//Next,Prev 버튼 활성화 유무
 		prev=nowBlock>1;	//현재 블럭이 1보다 크면 이전 버튼이 첫번째 블럭이면 이전버튼이 없으니까 같거나 작아야하는거아닌가
+							//아 , 2번째블럭이면 true 첫번째 block 이면 false니까 이전 버튼 없네 맞네.
 		next=nowBlock<totalBlock;
 		
 		//블럭에 표시할 페이지 번호 계산
