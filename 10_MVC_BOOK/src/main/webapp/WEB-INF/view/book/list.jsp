@@ -120,7 +120,7 @@
 								    
 								    
 								    <%
-								    	int startPage = pageDto.getStartPage();
+								    	int startPage = pageDto.getStart rPage();
 								    	int endPage = pageDto.getEndPage();
 								    	
 
