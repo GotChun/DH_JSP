@@ -62,16 +62,6 @@ public class UserMyInfoController implements SubController {
 			boolean isJoined = userService.memberJoin(userDto);
 			
 			
-			// 뷰로이동(내용전달 - ?)
-			if(isJoined) {
-				resp.sendRedirect(req.getContextPath() + "/login");
-				return ;
-			}else {
-				req.getRequestDispatcher("/WEB-INF-view/join.jsp").forward(req, resp);
-				return ;
-			}
-			
-			
 			
 		}catch(Exception e) {
 			

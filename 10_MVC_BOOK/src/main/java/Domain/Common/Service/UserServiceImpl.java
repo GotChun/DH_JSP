@@ -88,7 +88,7 @@ public class UserServiceImpl   {
 				}
 				
 				//session객체 생성후 table 저장
-				session.setAttribute("username",username);
+				session.setAttribute("username",dbUserDto.getUsername());
 				session.setAttribute("role",dbUserDto.getRole());
 				
 				

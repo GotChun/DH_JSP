@@ -14,6 +14,11 @@
 <script
 	src="${pageContext.request.contextPath}/resources/static/js/user/myinfo.js"
 	defer></script>
+	
+	<script>
+		const path = "${pageContext.request.contextPath}";
+		console.log("path : " + path);
+	</script>
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -32,8 +37,11 @@
 				<div class="m-3" style = "position:relative;">
 
 					<div class="profileBox"></div>
+						<img src="${pageContext.request.contextPath}/profile/image?username=${username}" alt="" style="width:100%;height:100%;border:1px solid;border-radius:50%;"/>
 					<div class="profileUploadBtn" style="position:absolute;left:68%;top:60%;cursor:pointer;">
-					<span class="material-symbols-outlined"> open_in_new </span>
+				<span class="material-symbols-outlined">
+toggle_on
+</span>
 					</div> 
 					<input type="file" class="form-control" />
 				</div>
