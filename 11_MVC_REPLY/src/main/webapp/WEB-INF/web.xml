@@ -54,6 +54,14 @@
   </filter-mapping>
   
 
+	<filter>
+		<filter-name>PermissonFilter</filter-name>
+		<filter-class>Filter.PermissonFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PermissonFilter</filter-name>
+		<url-pattern>/book/add</url-pattern>
+	</filter-mapping>
   
   
   

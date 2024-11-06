@@ -2,6 +2,14 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="Domain.Common.Dao.ConnectionPool.ConnectionPool"/>
     <fullyQualifiedTypeName name="javax.swing.text.Document"/>
-    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <fullyQualifiedTypeName name="Controller.User.UserProfileUploadController"/>
+    <fullyQualifiedTypeName name="java.beans.JavaBean"/>
+    <fullyQualifiedTypeName name="Properties.UploadProperties"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.datatype.jsr310.JavaTimeModule"/>
+    <fullyQualifiedTypeName name="javax.servlet.Filter"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 </qualifiedTypeNameHistroy>

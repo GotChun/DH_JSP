@@ -2,13 +2,10 @@ package Controller.User;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 
-import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import Controller.SubController;
 import properties.UploadProperties;
@@ -33,8 +30,16 @@ public class UserProfilePathController implements SubController{
 		
 		File file = new File(path + "profileImg.jpg");
 		
-		String mimeType = "application/octet-stream";
 	
+		
+		//프로필 미존재시 익명 이미지로 대체
+		if(!file.exists()) {
+			String projectPath = req.getServletPath();
+			System.out.println("projectPath : " + projectPath);
+			file = new File("C:\\Users\\Administrator\\Downloads\\새 폴더\\LEC\\07_JSP_SERVLET");
+		}
+	
+		String mimeType = "application/octet-stream";
 	
 		resp.setContentType(mimeType);
 		resp.setContentLengthLong(file.length());
